@@ -116,7 +116,7 @@ export default function Filters({ filters, setFilter, clearAll }: Props) {
           aria-label="Search images"
           placeholder='e.g. "embroidered neckline"'
           value={filters.q}
-          onChange={e => setFilter('q', e.target.value)}
+          onChange={e => setFilter('q' as keyof ActiveFilters, e.target.value)}
           className="w-full px-3 py-2 border rounded text-sm dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
           data-testid="search-input"
         />
@@ -132,7 +132,7 @@ export default function Filters({ filters, setFilter, clearAll }: Props) {
         <ChipGroup label="Season"           filterKey="season"           values={options.seasons} />
         <ChipGroup label="Occasion"         filterKey="occasion"         values={options.occasions} />
         <ChipGroup label="Consumer Profile" filterKey="consumer_profile" values={options.consumer_profiles} />
-        <ChipGroup label="Location"         filterKey="continent"        values={options.continents} />
+        <ChipGroup label="Continent"        filterKey="continent"        values={options.continents} />
         <ChipGroup label="Country"          filterKey="country"          values={options.countries} />
         <ChipGroup label="City"             filterKey="city"             values={options.cities} />
         <ChipGroup label="Designer"         filterKey="designer"         values={options.designers} />
