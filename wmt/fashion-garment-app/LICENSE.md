@@ -12,7 +12,7 @@ Permission is granted to:
 - Reference in job applications and interviews
 
 ## Prohibited Uses
-**Commercial use is STRICTLY PROHIBITED** without explicit written licensing agreement from [YOUR FULL NAME], including but not limited to:
+**Commercial use is STRICTLY PROHIBITED** without explicit written licensing agreement from Author, including but not limited to:
 - Distribution for profit
 - Inclusion in commercial products/services
 - SaaS offerings or subscription services
