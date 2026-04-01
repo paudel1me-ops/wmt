@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useMemo } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import FilterChip from './FilterChip'
 import type { ActiveFilters } from '@/app/dashboard/page'
 
@@ -32,7 +32,7 @@ const EMPTY_OPTIONS: DynamicOptions = {
   designers: [], years: [],
 }
 
-export default function Filters({ filters, setFilter, clearAll }: Props) {
+export default function Filters({ filters, setFilter, clearAll }: Props): React.JSX.Element {
   const [options, setOptions] = useState<DynamicOptions>(EMPTY_OPTIONS)
 
   useEffect(() => {
