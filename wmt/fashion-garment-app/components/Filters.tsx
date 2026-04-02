@@ -32,7 +32,7 @@ const EMPTY_OPTIONS: DynamicOptions = {
   designers: [], years: [],
 }
 
-export default function Filters({ filters, setFilter, clearAll }: Props): React.JSX.Element {
+export default function Filters({ filters, setFilter, clearAll }: Props): React.ReactElement {
   const [options, setOptions] = useState<DynamicOptions>(EMPTY_OPTIONS)
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export default function Filters({ filters, setFilter, clearAll }: Props): React.
       const data = await res.json()
       if (!Array.isArray(data)) return
 
-      const unique = <T>(arr: T[]): T[] => [...new Set(arr.filter(Boolean))]
+      const unique = <T,>(arr: T[]): T[] => [...new Set(arr.filter(Boolean))]
 
       setOptions({
         garment_types:     unique(data.map((img: any) => img.ai_metadata?.garment_type)),
